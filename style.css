@@ -1,0 +1,48 @@
+/* ... (Оставьте весь предыдущий код CSS, добавьте или замените следующее) ... */
+
+/* Стили для Скаттера (анимация пульсации) */
+.symbol.scatter {
+    animation: pulse 1s infinite alternate;
+    border: 2px solid gold;
+    box-shadow: 0 0 10px gold;
+    background: rgba(255, 215, 0, 0.2);
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Индикатор Фриспинов */
+.bonus-indicator {
+    background: linear-gradient(90deg, #ff00cc, #333399);
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px white;
+    width: 200px;
+    border: 2px solid white;
+}
+
+/* Эффект, когда бонус активен - меняем рамку слота */
+body.bonus-active .slot-machine {
+    animation: rainbowBorder 2s linear infinite;
+}
+
+@keyframes rainbowBorder {
+    0% { border-color: red; }
+    33% { border-color: lime; }
+    66% { border-color: blue; }
+    100% { border-color: red; }
+}
+
+/* Блокировка переключателей во время игры */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Предыдущие стили остаются... */
